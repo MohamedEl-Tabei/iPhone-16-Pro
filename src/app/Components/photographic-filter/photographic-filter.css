@@ -1,0 +1,23 @@
+swiper-container {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition-duration: 1s;
+    background-image:url(/images/photographic-style.jpg)
+}
+
+swiper-slide img {
+    height: auto;
+    margin-inline: auto;
+}
+
+.grayscale {
+    backdrop-filter: grayscale(1);
+
+}
+
+.brightness {
+    backdrop-filter: brightness(1.2);
+}

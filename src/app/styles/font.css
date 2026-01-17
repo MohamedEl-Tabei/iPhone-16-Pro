@@ -1,0 +1,11 @@
+@font-face {
+  font-family: base;
+  src: url("/fonts/sf-pro-display_regular.ttf");
+}@font-face {
+  font-family: base-bold;
+  src: url("/fonts/sf-pro-display_bold.ttf");
+}
+@font-face {
+  font-family: base-light;
+  src: url("/fonts/sf-pro-display_light.ttf");
+}

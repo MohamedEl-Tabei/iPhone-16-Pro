@@ -1,0 +1,83 @@
+<app-grid>
+  <div class="col-span-1"></div>
+  <div class="col-span-10">
+    <app-base-text-glow
+      topText="A"
+      centerText="huge leap"
+      [isFlex]="true"
+      bottomText="in battery life."
+    >
+    </app-base-text-glow>
+    <app-base-text-glow topText="Stellar" glowPosition="top" [isFlex]="true"></app-base-text-glow>
+  </div>
+  <div class="col-span-1"></div>
+  <div class="col-span-12"></div>
+  <div class="col-span-1"></div>
+  <p class="col-span-5">
+    iPhone 16 Pro gives you longer battery life — and iPhone 16 Pro Max delivers
+    <strong>the best battery life ever on an iPhone.</strong> How? An optimized internal design fits
+    larger batteries, which work together with the A18 Pro chip to deliver incredibly
+    power-efficient performance. Even with so many new capabilities.
+  </p>
+  <div class="col-span-3"></div>
+  <p class="col-span-2">
+    Up to <strong class="text-4xl block">33 hours </strong> video playback on iPhone 16 Pro Max9
+  </p>
+  <div class="col-span-1"></div>
+
+  <div class="col-span-1"></div>
+  <p class="col-span-5">
+    Snap on a new MagSafe charger for <strong> even faster wireless charging7</strong> — up to 25W
+    with a 30W power adapter or higher, enabling up to 50% charge in around 30 minutes.8
+  </p>
+  <div class="col-span-3"></div>
+  <p class="col-span-2">
+    Up to <strong class="text-4xl block">27 hours </strong>video playback on iPhone 16 Pro9
+  </p>
+  <div class="col-span-1"></div>
+  <div class="col-span-12"></div>
+  <div class="col-span-1"></div>
+  <div class="col-span-10 relative">
+    <video class="screen" [muted]="true" [autoplay]="true" src="videos/batteryLife..mp4"></video>
+
+    <img class="frame absolute top-0 right-1" src="images/iphone.png" alt="" />
+  </div>
+  <div class="col-span-1"></div>
+  <div class="col-span-1"></div>
+  <div class="col-span-11 pb-10">
+    <div class="flex mt-37 gap-10">
+      <strong class="text-2xl">Compare with</strong>
+      <div class="relative">
+        <svg class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+          <path
+            d="m22.5597 16.9375-5.5076-5.5c-.5854-.5854-1.5323-.5825-2.1157.0039-.5835.5869-.5815 1.5366.0039 2.1211l4.4438 4.4375-4.4438 4.4375c-.5854.5845-.5874 1.5342-.0039 2.1211.2922.2944.676.4414 1.0598.4414.3818 0 .7637-.1455 1.0559-.4375l5.5076-5.5c.2815-.2812.4403-.6636.4403-1.0625s-.1588-.7812-.4403-1.0625z"
+          ></path>
+        </svg>
+        <select class="text-2xl">
+          <option>iPhone 12 Pro</option>
+          <option>iPhone 12 Pro Max</option>
+          <option>iPhone 13 Pro</option>
+          <option>iPhone 13 Pro Max</option>
+          <option>iPhone 14 Pro</option>
+          <option>iPhone 14 Pro Max</option>
+          <option>iPhone 15 Pro</option>
+          <option>iPhone 15 Pro Max</option>
+        </select>
+      </div>
+    </div>
+    <div class="mt-20 flex gap-40">
+      <div class="w-max">
+        <div class="text-xl font-bold">Up to</div>
+        <div class="text-gradient text-3xl font-bold">10 more hours</div>
+        <div class="text-xl font-bold">video playback on</div>
+        <div class="text-xl font-bold"> iPhone 16 Pro</div>
+      </div>
+      <div class="w-max">
+        <div class="text-xl font-bold">Up to</div>
+        <div class="text-gradient text-3xl font-bold">16 more hours</div>
+        <div class="text-xl font-bold">video playback on </div>
+        <div class="text-xl font-bold">iPhone 16 Pro Max</div>
+      </div>
+    </div>
+  </div>
+</app-grid>

@@ -1,0 +1,38 @@
+<section class="grid grid-flow-col grid-rows-3 relative" appAnimation action="fade-in">
+    <div class=" text-container ">
+        <h4 class="w-100">Lock in your look.</h4>
+        <p #p1>
+            We’ve created new styles that let you<strong> dial in your exact desired look with more advanced skin-tone
+                rendering</strong>
+            and set it across your photos.</p>
+    </div>
+    <div class=" text-container ">
+        <h4 class="w-100">Align with your aesthetic. </h4>
+        <p #p2>
+            Our improved image pipeline also enables more creative styles, which allow you to<strong> customize the
+                different
+                moods of a photo</strong> through color.
+
+        </p>
+        <p>With the power of A18 Pro, you can see the style applied in a live preview — like professional color grading
+            in real time.
+
+        </p>
+    </div>
+    <div class=" text-container ">
+        <h4 class="w-100">Make the most of your megapixels. </h4>
+        <p #p3>
+            Personalize every style even more with the new control pad, which makes it <strong> easy to adjust tone and
+                color
+                simultaneously.</strong> You can also use the slider to adjust the intensity of the specific colors,
+            instead of
+            applying a one-size-fits-all approach.
+
+    </div>
+
+    <div class="sticky col-span-5">
+        <img appAnimation [threshold]=".1" action="fade-in" [ref]="p1" src="images/feature1.jpg">
+        <img appAnimation [threshold]=".1" action="fade-in" [ref]="p2" src="images/feature2.jpg">
+        <img appAnimation [threshold]=".1" action="fade-in" [ref]="p3" src="images/feature3.jpg">
+    </div>
+</section>

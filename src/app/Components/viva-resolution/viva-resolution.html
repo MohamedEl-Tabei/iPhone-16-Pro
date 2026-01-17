@@ -1,0 +1,41 @@
+<app-zoom-slider src="images/48MP.jpg" text="New 48MP Ultra Wide camera. Viva la resolution."></app-zoom-slider>
+<app-grid>
+    <div class="col-span-1"></div>
+    <p class="col-span-4">
+        iPhone 16 Pro adds a second 48MP camera to the Pro camera system. The new 48MP Ultra Wide camera has a more
+        advanced quad-pixel sensor for super-high-resolution 48MP ProRAW and HEIF photos with autofocus.
+
+
+    </p>
+    <div class="col-span-2"></div>
+    <p class="col-span-4">So you can <strong> capture a mesmerizing new level of detail </strong>in macro photos and
+        sweeping, wide-angle
+        shots.
+    </p>
+</app-grid>
+<div class="w-3/5 m-auto mt-60 mb-20">
+    <app-base-slider [rounded]="false" [slides]="slides" signalName="vivaResolution"></app-base-slider>
+    <div class="bg-blur h-[56px] w-[600px] m-auto rounded-[50px] flex flex-col">
+        <div class="flex m-auto relative">
+            @for (button of buttons; track $index) {
+            <div class="pill" (click)="onClickBtn($index)">
+                {{button.text}}
+            </div>
+            }
+            <div class="pill active absolute " [style.left]="activeSlide*80+'px'"></div>
+        </div>
+
+    </div>
+    <p class="mt-10 text-center">{{buttons[activeSlide].description}}</p>
+</div>
+<app-grid>
+    <div class="cols-span-1"></div>
+    <div class="col-span-4 flex items-center">
+        <p> More zoom? Boom. Now you can shoot in 120 mm with the 5x Telephoto camera on both Pro models and get sharper
+            close-ups from farther away. With multiple framing options, it’s like having seven pro lenses in your
+            pocket,
+            everywhere you go.</p>
+    </div>
+    <div class="cols-span-1"></div>
+    <img class="cols-span-6 mb-20" src="images/lens.jpg" alt="" srcset="">
+</app-grid>

@@ -1,0 +1,7 @@
+<swiper-container #swiperRef slides-per-view="auto" free-mode="true" centered-slides="true" space-between="0" class="rounded-xl m-auto "
+    (wheel)="onScrollFilter($event)" appAnimation action="fade-in-bottom" [threshold]=".1">
+    @for (f of filters; track $index) {
+    <swiper-slide class=" {{f}} {{isEnd?'rounded-2xl ':'border-x-8  border-black'}}"> </swiper-slide>
+    }
+
+</swiper-container>

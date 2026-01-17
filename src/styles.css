@@ -1,3 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+
+:root {
+    --whitesmoke: #c7c1bb;
+    --blue: #0071e3;
+    --secondary: #86868b;
+}
+
+* {
+    font-family: base;
+    letter-spacing: .7px;
+}
+
+section {
+    margin: 160px 0 206px 0;
+}
+
+li {
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 0px 8px;
+}
+
+li:hover {
+    color: white;
+}
+
+
+strong {
+    color: white !important;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.4705882353;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+h2{
+    font-size: 56px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+video,
+img {
+    object-fit: cover;
+}
+
+.bg-blur {
+    backdrop-filter: blur(20px) !important;
+    background-color: #424245b3 !important;
+}
+
+.bg-gradient {
+    background: radial-gradient(100% 50% at center, #2c201a, #000);
+}
+
+.text-gradient {
+    flex: 1;
+    background: linear-gradient(90deg, #efcdbb, #dab8a4 50%, #a3735e calc(100% - 5px), rgba(0, 0, 0, 0) calc(100% - 4px));
+    background-size: calc(100% - 1px) auto;
+    clip-path: content-box;
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+}
+

@@ -1,0 +1,30 @@
+button {
+    background-color: var(--blue);
+    cursor: pointer;
+    border: 0.800px solid var(--blue);
+}
+
+button:hover {
+    border-color: #0076DF;
+    background-color: #0076DF;
+}
+
+button:disabled {
+    opacity: .7;
+    cursor: default;
+
+}
+
+.bg-blur {
+    border: none;
+}
+
+.bg-blur:hover {
+    background-color: #828284b3 !important;
+
+}
+
+.bg-blur:disabled {
+    backdrop-filter: blur(20px) !important;
+    background-color: #424245b3 !important;
+}

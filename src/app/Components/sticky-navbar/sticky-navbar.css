@@ -1,0 +1,29 @@
+.container {
+    max-width: 980px;
+    margin: auto;
+    width: 100%;
+    padding: 0px;
+}
+
+nav {
+    background-color: #161617cc ;
+    border-color: #ffffff3d;
+}
+ul{
+    display: flex;
+    align-items: center;
+    gap:50px;
+}
+
+li {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    width: max-content;
+}
+.active{
+    color: white;
+    border-bottom: 1px solid white;
+    cursor: default;
+}

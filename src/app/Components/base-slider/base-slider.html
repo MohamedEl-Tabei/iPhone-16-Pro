@@ -1,0 +1,27 @@
+<swiper-container #swiperRef slides-per-view="auto" centered-slides="true" space-between="20"
+    class="m-auto {{classNames()}}" (swiperslidechange)="onSwiperslidechange()" [class.rounded-2xl]="rounded()"
+    appAnimation action="fade-in-bottom" [threshold]=".1">
+
+    @for (slide of slides(); track $index) {
+    <swiper-slide [style.width]="slideWidth()">
+        @if (slide.isVideo) {
+        <video (ended)="onVideoEnded()" [class.rounded-xl]="rounded()" [muted]="true" [autoplay]="$index==0"
+            src="{{slide.src}}"></video>
+        @if(activeVideoIndex==$index){
+        <app-button class="absolute right-23 top-118" bg="blur" (click)="onToggleVideo()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56">
+                <path [attr.d]="videoIcon"></path>
+            </svg>
+        </app-button>
+        }
+        }
+        @else {
+        <img [class.rounded-xl]="rounded()" src="{{slide.src}}" alt="">
+        }
+        @if(descriptions().length){
+        <div class="description {{classNames().includes('text-gradient')?'text-gradient':''}}">
+            {{descriptions()[$index]}}</div>
+        }
+    </swiper-slide>
+    }
+</swiper-container>

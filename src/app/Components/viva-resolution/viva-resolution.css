@@ -1,0 +1,21 @@
+
+.pill{
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.smooth{
+    transition-duration: 4s;
+}
+.active{
+    backdrop-filter: invert(1);
+    transition-duration: 1s;
+    border-radius: 50px;
+}
+img{
+    width: 650px;
+    max-width: none;
+}

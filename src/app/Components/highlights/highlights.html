@@ -1,0 +1,47 @@
+<section #setionRef class="highlights ">
+    <div class="fade-in-bottom">
+        <h2>Get the highlights.</h2>
+        <swiper-container #swiperRef appAnimation action="fade-in-bottom" class="mySwiper" slides-per-view="auto"
+            centered-slides="true" space-between="30" allow-touch-move="false" autoplay-delay="5000"
+            (swiperautoplaytimeleft)="onSwiperautoplaytimeleft()" (swiperslidechange)="onSwiperslidechange()">
+            @for (slide of slides; track $index) {
+            <swiper-slide class="rounded-2xl" (click)="onSwap($index)">
+                @if (slide.isVideo) {
+                <video class="rounded-2xl" [muted]="true" [autoplay]="$index==0" src="{{slide.src}}"></video>
+                }
+                @else {
+                <img class="rounded-2xl" src="{{slide.src}}" alt="">
+                @if ($index==4) {
+                <small class="absolute opacity-50 w-full text-center bottom-20">Asphalt Legends Unite</small>
+                }
+                }
+                @if ($index==activeSlide) {
+                <div class="description" [animate.enter]="enterClass()">
+                    @for (des of slide.descriptions; track $index) {
+                    <p>{{des}} <sup class="underline" [class.hidden]="activeSlide!=5||$index!=2">1</sup></p>
+                    }
+                </div>
+                }
+
+            </swiper-slide>
+            }
+
+        </swiper-container>
+    </div>
+    <nav class="gap-5" appAnimation action="bounce-in-fwd" [ref]="setionRef">
+        <app-button bg="blur">
+            <svg xmlns="http://www.w3.org/2000/svg" (click)="onTogglePlay()" viewBox="0 0 56 56">
+                <path [attr.d]="icon"></path>
+            </svg></app-button>
+        <div class="bg-blur rounded-full">
+            @for (button of slides; track $index) {
+
+            <div class="rounded-full dot  {{activeSlide==$index?'active':''}}" (click)="onSwap($index)">
+                <div class="h-full bg-white rounded-full opacity-50" [style.width]="timeLeftPercent()"
+                    [class.hidden]="activeSlide!=$index"></div>
+            </div>
+            }
+        </div>
+
+    </nav>
+</section>

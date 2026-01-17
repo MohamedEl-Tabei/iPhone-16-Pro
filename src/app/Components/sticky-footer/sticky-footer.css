@@ -1,0 +1,11 @@
+svg{
+    width: 36px;
+    height: 36px;
+    fill: white;
+}
+.content{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition-duration: 1s;
+}

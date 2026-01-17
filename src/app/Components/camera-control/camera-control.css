@@ -1,0 +1,25 @@
+section{
+    margin-bottom: 50px;
+}
+video {
+    width: 100%;
+}
+a{
+    color: var(--blue);
+    display: flex;
+    position: relative;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: underline;
+}
+svg{
+    width: 33px;
+    height: 33px;
+    fill: var(--blue);
+}
+

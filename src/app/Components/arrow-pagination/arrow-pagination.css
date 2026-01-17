@@ -1,0 +1,12 @@
+.pagination {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    margin-right: 80px;
+}
+
+svg {
+    width: 36px;
+    height: 36px;
+    fill: white;
+}

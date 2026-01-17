@@ -1,0 +1,23 @@
+section {
+    height: 100vh;
+    margin: 0px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: center;
+    top: 100px;
+    width: 100%;
+}
+
+app-button {
+    bottom: 120px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+video {
+    height: 95vh;
+}

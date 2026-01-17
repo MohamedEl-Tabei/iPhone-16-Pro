@@ -1,0 +1,35 @@
+<section>
+  <app-base-text-glow topText="Take total" centerText="Camera Control." glowPosition="center"></app-base-text-glow>
+  <div class="mt- flex justify-center ">
+    <a (click)="onToggle()">{{iconType}} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56">
+        <path [attr.d]="icon"></path>
+      </svg></a>
+  </div>
+  <video #videoRef appAutoPlay [muted]="true" (play)="onPlay()" (ended)="onEnd()" (pause)="onPause()" [autoplay]="true"
+    src="/videos/cameraControl.mp4"></video>
+  <div class="my-30">
+    <app-grid>
+      <p class="col-span-1"></p>
+      <p class="col-span-4">Now you can take the perfect photo or video in record time. Camera Control gives you
+        an<strong> easier
+          way to quickly access camera tools.</strong> Simply slide your finger to adjust camera functions like exposure
+        or depth of
+        field, and toggle through each lens or use digital zoom to frame your shot — just how you like it.
+      </p>
+      <p class="col-span-2"></p>
+      <p class=" col-span-4">
+        Camera Control features a two-stage shutter that lets you<strong> automatically lock focus and exposure</strong>
+        with a light press
+        — so you can reframe your shot without losing focus on your subject.
+        <a href="">How to use Camera Control <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+            <path
+              d="m22.5597 16.9375-5.5076-5.5c-.5854-.5854-1.5323-.5825-2.1157.0039-.5835.5869-.5815 1.5366.0039 2.1211l4.4438 4.4375-4.4438 4.4375c-.5854.5845-.5874 1.5342-.0039 2.1211.2922.2944.676.4414 1.0598.4414.3818 0 .7637-.1455 1.0559-.4375l5.5076-5.5c.2815-.2812.4403-.6636.4403-1.0625s-.1588-.7812-.4403-1.0625z">
+            </path>
+          </svg></a>
+      </p>
+    </app-grid>
+  </div>
+
+  <app-camera-control-slider></app-camera-control-slider>
+  <app-visual-intelligence></app-visual-intelligence>
+</section>

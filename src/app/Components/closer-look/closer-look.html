@@ -1,0 +1,14 @@
+<section #sectionRef class="relative">
+
+    <h2>Take a closer look.</h2>
+    <app-base-slider [signalName]="'closerLook'" [slides]="slides"></app-base-slider>
+    <nav class="  bottom-0 flex w-full flex-col   items-center " appAnimation action="bounce-in-fwd">
+        <small>iPhone 16 Pro in {{selectedColor}} Titanium</small>
+        <div class="rounded-full bg-blur">
+            @for (color of colors; track $index) {
+            <div class="{{color}} rounded-full circle-color {{selectedColor==color?'active-color':''}}"
+                (click)="onChangeColor(color)"></div>
+            }
+        </div>
+    </nav>
+</section>

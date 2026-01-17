@@ -1,0 +1,35 @@
+.footer{
+    background-color: #1d1d1f;
+}
+li {
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 400;
+    cursor: default;
+    margin-bottom: 10px;
+    padding: 0px 8px;
+}
+
+li:hover {
+    color: var(--secondary);
+}
+ol{
+    list-style: decimal;
+    padding-top: 20px;
+}
+ol a{
+    color: white;
+    text-decoration: underline;
+}
+.col-span-3 a,.col-span-4 a,.col-span-2 a {
+    display: block;
+    width: max-content;
+}
+.col-span-3 a:hover,.col-span-4 a:hover,.col-span-2 a:hover,.ms-8 a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.block a{
+    color: var(--blue);
+    text-decoration: underline;
+}

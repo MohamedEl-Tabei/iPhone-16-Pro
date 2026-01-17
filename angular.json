@@ -25,7 +25,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/styles/animations.css",
+              "src/app/styles/font.css"
             ]
           },
           "configurations": {

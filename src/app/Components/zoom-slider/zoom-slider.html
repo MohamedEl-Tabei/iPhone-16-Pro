@@ -1,0 +1,29 @@
+<div class="relative">
+    <swiper-container #swiperRefScreen slides-per-view="auto" centered-slides="true" space-between="20" appAnimation
+        action="fade-in-bottom" [threshold]=".1">
+        <swiper-slide>
+            <div class="swiper-zoom-container ">
+
+                <div class="swiper-zoom-target zoom relative">
+                    @if(activeIndex== 0){
+                    <h4 class="absolute" animate.leave="fade-out-leave" animate.enter="fade-in-enter">{{text()}}</h4>
+                    }
+                    @if (isVideo()) {
+                    <video class="screen" [muted]="true" [autoplay]="true" src="{{src()}}"></video>
+                    }
+                    @else {
+                    <img class=" screen" src="{{src()}}" />
+                    }
+                    <img class="frame absolute top-0 right-1" src="images/iphone.png" alt="">
+                </div>
+            </div>
+        </swiper-slide>
+    </swiper-container>
+    <swiper-container #swiperRefControl free-mode="true" class="absolute top-0" slides-per-view="auto"
+        centered-slides="true" space-between="20" (wheel)="onScroll($event)" appAnimation action="fade-in-bottom"
+        [threshold]=".1">
+
+        <swiper-slide class="opacity-0">1 </swiper-slide>
+        <swiper-slide class="opacity-0">2 </swiper-slide>
+    </swiper-container>
+</div>

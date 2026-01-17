@@ -1,0 +1,1 @@
+export type TSignalName = "closerLook" | "titanium" | "cameraControl" | "vivaResolution"|undefined

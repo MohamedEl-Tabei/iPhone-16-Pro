@@ -1,0 +1,19 @@
+@switch (glowPosition()) { @case ("top") {
+<div [style.display]="isFlex()?'flex':'block'">
+  <h2 appAnimation action="glow">{{ topText() }}</h2>
+  <h2>{{ centerText() }}</h2>
+  <h2>{{ bottomText() }}</h2>
+</div>
+}@case ("center") {
+<div [class.flex]="isFlex()">
+  <h2>{{ topText() }}</h2>
+  <h2 appAnimation action="glow">{{ centerText() }}</h2>
+  <h2>{{ bottomText() }}</h2>
+</div>
+} @case ("bottom") {
+<div [style.display]="isFlex()?'flex':'block'">
+  <h2>{{ topText() }}</h2>
+  <h2>{{ centerText() }}</h2>
+  <h2 appAnimation action="glow">{{ bottomText() }}</h2>
+</div>
+} }

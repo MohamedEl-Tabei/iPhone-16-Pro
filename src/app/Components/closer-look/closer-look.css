@@ -1,0 +1,64 @@
+.bg-blur{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav{
+    position: sticky;
+    z-index: 9;
+    padding-bottom: 100px;
+}
+.circle-color {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    outline: 2px solid transparent;
+}
+h2 {
+  padding-bottom: 80px;
+  margin-left: 80px;
+  width: 87.5%;
+  max-width: 1680px;
+  font-size: 56px;
+  font-weight: 600;
+}
+.active-color {
+    border: 2px solid black;
+    outline: 2px solid white;
+}
+
+.Desert {
+    background-color: #959086;
+}
+
+.Natural {
+    background-color: #977e6b;
+}
+
+.White {
+    background-color: #d3d1cd;
+}
+
+.Black {
+    background-color: black;
+}
+
+
+.colors{
+    border-color: #6b6d6d;
+    background: conic-gradient(from 0deg at 50% 50%,#202121 0%,#dbdad7 25%,#a6a198 50%,#a8907e 75%,#202121 100%);
+}
+
+
+small {
+    height: max-content;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+    backdrop-filter: blur(7px);
+    background-color: #424245b3;
+    width: max-content;
+}
