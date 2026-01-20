@@ -18,6 +18,9 @@ export class PhotographicFilter {
   ngAfterViewInit() {
     this.swiperElement = this.swiperRef()?.nativeElement;
     this.swiper = this.swiperElement?.swiper;
+    
+    console.log(this.swiper?.allowTouchMove);
+    
     window.addEventListener('scroll', this.onScrollFilter);
   }
   setFilterStyle() {

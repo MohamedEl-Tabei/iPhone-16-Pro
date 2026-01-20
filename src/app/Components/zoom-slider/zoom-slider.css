@@ -2,12 +2,12 @@ swiper-container {
     width: 100%;
     height: 100vh;
     transition-duration: 1s;
-    cursor: default;
 }
 
 swiper-slide img {
     height: auto;
     margin-inline: auto;
+    cursor: default !important;
 }
 
 .zoom {
