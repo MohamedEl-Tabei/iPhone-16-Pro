@@ -4,7 +4,7 @@
 
 @media (max-width: 1286px) {
   .mobile-warning {
-    display: flex;
+    /* display: flex; */
     position: fixed;
     inset: 0;
     background: black;

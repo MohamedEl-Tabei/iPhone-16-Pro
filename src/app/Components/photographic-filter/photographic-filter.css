@@ -5,7 +5,9 @@ swiper-container {
     background-repeat: no-repeat;
     background-size: cover;
     transition-duration: 1s;
-    background-image:url(/images/photographic-style.jpg)
+    background-image:url(/images/photographic-style.jpg);
+    position: sticky;
+    top: 0;
 }
 
 swiper-slide img {

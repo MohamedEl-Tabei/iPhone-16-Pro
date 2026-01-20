@@ -7,45 +7,53 @@ import { Swiper } from 'swiper/types';
   imports: [],
   templateUrl: './photographic-filter.html',
   styleUrl: './photographic-filter.css',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class PhotographicFilter {
-  swiperRef = viewChild<ElementRef<SwiperContainer>>("swiperRef");
-  swiper!: Swiper | undefined
-  swiperElement!: SwiperContainer | undefined
-  isEnd = false
-  filters = ["", "brightness", "grayscale"]
+  swiperRef = viewChild<ElementRef<SwiperContainer>>('swiperRef');
+  swiper!: Swiper | undefined;
+  swiperElement!: SwiperContainer | undefined;
+  isEnd = false;
+  filters = ['', 'brightness', 'grayscale'];
   ngAfterViewInit() {
-    this.swiperElement = this.swiperRef()?.nativeElement
-    this.swiper = this.swiperElement?.swiper
-    this.swiper?.mousewheel.enable()
+    this.swiperElement = this.swiperRef()?.nativeElement;
+    this.swiper = this.swiperElement?.swiper;
+    window.addEventListener('scroll', this.onScrollFilter);
   }
-  onScrollFilterTop(event: WheelEvent) {
-    this.isEnd = false
-    if (this.swiper?.isBeginning) this.swiper.mousewheel.disable()
-    else {
-      this.swiperElement?.scrollIntoView({ behavior: "smooth" })
-      event.preventDefault()
-      this.swiper?.mousewheel.enable()
-    }
-  }
-  onScrollFilterBottom(event: WheelEvent) {
-    this.isEnd = this.swiper?.isEnd || false
-    if (this.swiper?.isEnd) this.swiper.mousewheel.disable()
-    else {
-      this.swiperElement?.scrollIntoView({ behavior: "smooth" })
-      event.preventDefault()
-      this.swiper?.mousewheel.enable()
-    }
-  }
+  // onScrollFilterTop(event: WheelEvent) {
+  //   this.isEnd = false
+  //   if (this.swiper?.isBeginning) this.swiper.mousewheel.disable()
+  //   else {
+  //     this.swiperElement?.scrollIntoView({ behavior: "smooth" })
+  //     event.preventDefault()
+  //     this.swiper?.mousewheel.enable()
+  //   }
+  // }
+  // onScrollFilterBottom(event: WheelEvent) {
+  //   this.isEnd = this.swiper?.isEnd || false
+  //   if (this.swiper?.isEnd) this.swiper.mousewheel.disable()
+  //   else {
+  //     this.swiperElement?.scrollIntoView({ behavior: "smooth" })
+  //     event.preventDefault()
+  //     this.swiper?.mousewheel.enable()
+  //   }
+  // }
   setFilterStyle() {
-    if (this.swiper?.mousewheel.enabled || this.swiper?.isBeginning) this.swiperElement?.style.setProperty("width", "100%")
-    else this.swiperElement?.style.setProperty("width", "80%")
+    if (!this.swiper?.isEnd) this.swiperElement?.style.setProperty('width', '100%');
+    else this.swiperElement?.style.setProperty('width', '80%');
   }
-  onScrollFilter(event: Event) {
-    let evnt = event as WheelEvent
-    if (evnt.deltaY < 0) this.onScrollFilterTop(evnt)
-    else this.onScrollFilterBottom(evnt)
-    this.setFilterStyle()
-  }
+  onScrollFilter = (event: Event) => {
+    const start = 16600;
+    const end = 18000;
+
+    let y = window.scrollY;
+
+    let progress = (y - start) / (end - start);
+    progress = Math.min(Math.max(progress, 0), 1);
+
+    this.swiper?.setProgress(progress);
+
+      this.setFilterStyle();
+  };
+ 
 }

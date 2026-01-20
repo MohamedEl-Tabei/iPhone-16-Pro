@@ -29,4 +29,8 @@ export class App {
   heroRef=viewChild<ElementRef<HTMLElement>>("heroRef")
   footerRef=viewChild<ElementRef<HTMLElement>>("footerRef")
   //#endregion
+  ngAfterViewInit(){
+  document.body.scrollIntoView({ behavior: "smooth" })
+
+  }
 }
