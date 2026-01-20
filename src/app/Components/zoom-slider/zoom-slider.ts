@@ -31,35 +31,9 @@ export class ZoomSlider {
     this.swiperScreen?.zoom.in(2.5);
     window.addEventListener('scroll', this.onScroll);
   }
-  // onScrollTop(event: WheelEvent) {
-  //   if (this.swiperControl?.progress) {
-  //     const r = this.swiperControl?.progress;
-  //     this.swiperScreen?.zoom.in(this.ratio - r)
-  //   }
-  //   if (this.swiperControl?.isBeginning) this.swiperControl.mousewheel.disable()
-  //   else {
-  //     this.swiperElementControl?.scrollIntoView({ behavior: "smooth" })
-  //     event.preventDefault()
-  //     this.swiperControl?.mousewheel.enable()
-  //   }
-  // }
-  // onScrollBottom(event: WheelEvent) {
-  //   if (this.swiperControl?.progress) {
-  //     const r = this.swiperControl?.progress;
-  //     this.swiperScreen?.zoom.in(this.ratio - r - .5)
-  //   }
-  //   if (this.swiperControl?.isEnd) this.swiperControl.mousewheel.disable()
-  //   else {
-  //     this.swiperElementControl?.scrollIntoView({ behavior: "smooth" })
-  //     event.preventDefault()
-  //     this.swiperControl?.mousewheel.enable()
-  //   }
-  // }
+ 
   onScroll = (event: Event) => {
     let y = window.scrollY;
-    // if (evnt.deltaY < 0) this.onScrollTop(evnt)
-    // else this.onScrollBottom(evnt)
-    console.log(window.scrollY);
     if (this.child() == 1) {
       if (y < 8800) {
         this.showText.set(true);

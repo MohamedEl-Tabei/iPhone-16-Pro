@@ -20,24 +20,6 @@ export class PhotographicFilter {
     this.swiper = this.swiperElement?.swiper;
     window.addEventListener('scroll', this.onScrollFilter);
   }
-  // onScrollFilterTop(event: WheelEvent) {
-  //   this.isEnd = false
-  //   if (this.swiper?.isBeginning) this.swiper.mousewheel.disable()
-  //   else {
-  //     this.swiperElement?.scrollIntoView({ behavior: "smooth" })
-  //     event.preventDefault()
-  //     this.swiper?.mousewheel.enable()
-  //   }
-  // }
-  // onScrollFilterBottom(event: WheelEvent) {
-  //   this.isEnd = this.swiper?.isEnd || false
-  //   if (this.swiper?.isEnd) this.swiper.mousewheel.disable()
-  //   else {
-  //     this.swiperElement?.scrollIntoView({ behavior: "smooth" })
-  //     event.preventDefault()
-  //     this.swiper?.mousewheel.enable()
-  //   }
-  // }
   setFilterStyle() {
     if (!this.swiper?.isEnd) this.swiperElement?.style.setProperty('width', '100%');
     else this.swiperElement?.style.setProperty('width', '80%');
