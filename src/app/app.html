@@ -1,44 +1,45 @@
-<div class="mobile-warning ">
-  This experience is not optimized for your device.
-  Please use a desktop.
-</div>
-
-<app-navbar></app-navbar>
-
-<div #heroRef>
-  <app-hero></app-hero>
-</div>
-<div
-  class="sticky top-0 z-100 backdrop-blur-sm"
-  appAnimation
-  action="fade-out-top"
-  [ref]="heroRef"
-  [threshold]="0.5"
->
-  <app-sticky-navbar></app-sticky-navbar>
-</div>
-@defer(on viewport){
-<app-highlights></app-highlights>
-} @placeholder {
-<p></p>
-}
-<app-closer-look></app-closer-look>
-<app-titanium></app-titanium>
-<div #footerRef>
-  <app-camera-control appSetMessage message="Go deeper on Camera Control"></app-camera-control>
-  <app-vision4k appSetMessage message="Nerd out on Pro video"></app-vision4k>
-  <app-viva-resolution appSetMessage message="Zoom in on 5x Telephoto"></app-viva-resolution>
-  <div
-    appAnimation
-    action="bounce-in-fwd"
-    [threshold]="0.1"
-    [ref]="footerRef"
-    class="w-max m-auto flex align-center rounded-full p-2 px-3 sticky bottom-10 z-19 bg-blur"
-  >
-    <app-sticky-footer></app-sticky-footer>
+<div class="relative">
+  <div class="mobile-warning">
+    This experience is not optimized for your device. Please use a desktop.
   </div>
-</div>
 
-<app-photographic-style></app-photographic-style>
-<app-battery-life></app-battery-life>
-<app-footer></app-footer>
+  <app-navbar></app-navbar>
+
+  <div #heroRef>
+    <app-hero></app-hero>
+  </div>
+  <div
+    class="sticky top-0 z-100 backdrop-blur-sm"
+    appAnimation
+    action="fade-out-top"
+    [ref]="heroRef"
+    [threshold]="0.5"
+  >
+    <app-sticky-navbar></app-sticky-navbar>
+  </div>
+  @defer (on viewport) {
+    <app-highlights></app-highlights>
+  } @placeholder {
+    <p></p>
+  }
+  <app-closer-look></app-closer-look>
+  <app-titanium></app-titanium>
+  <div #footerRef>
+    <app-camera-control appSetMessage message="Go deeper on Camera Control"></app-camera-control>
+    <app-vision4k appSetMessage message="Nerd out on Pro video"></app-vision4k>
+    <app-viva-resolution appSetMessage message="Zoom in on 5x Telephoto"></app-viva-resolution>
+    <div
+      appAnimation
+      action="bounce-in-fwd"
+      [threshold]="0.1"
+      [ref]="footerRef"
+      class="w-max m-auto flex align-center rounded-full p-2 px-3 sticky bottom-10 z-19 bg-blur"
+    >
+      <app-sticky-footer></app-sticky-footer>
+    </div>
+  </div>
+
+  <app-photographic-style></app-photographic-style>
+  <app-battery-life></app-battery-life>
+  <app-footer></app-footer>
+</div>
